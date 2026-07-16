@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arularasan | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* Animated Background */
+body{
+    color:white;
+    background:linear-gradient(-45deg,#0f172a,#e75252,#e7b849,#a4e779);
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+    overflow-x:hidden;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Blur Effects */
+body::before{
+content:"";
+position:fixed;
+width:350px;
+height:350px;
+background:#f47375;
+border-radius:50%;
+filter:blur(150px);
+top:-120px;
+left:-120px;
+opacity:.25;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:400px;
+height:400px;
+background:#f07373;
+border-radius:50%;
+filter:blur(150px);
+bottom:-150px;
+right:-150px;
+opacity:.25;
+z-index:-1;
+}
+
+/* Header */
+header{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* Hero */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:140px 10% 80px;
+    flex-wrap:wrap;
+}
+
+.text{
+    flex:1;
+}
+
+.text h3{
+    font-size:28px;
+}
+
+.text h1{
+    font-size:60px;
+    color:#00e5ff;
+    margin:10px 0;
+}
+
+.text p{
+    max-width:550px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:30px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* Profile Image */
+.image{
+    flex:1;
+    text-align:center;
+}
+
+.image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #00e5ff;
+    box-shadow:0 0 40px #00e5ff;
+}
+
+/* Glass Sections */
+section{
+    width:85%;
+    margin:40px auto;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 8px 30px rgba(0,0,0,.3);
+}
+
+h2{
+    color:#17d3e0;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.about p{
+    text-align:center;
+    line-height:1.8;
+}
+
+/* Skills */
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.skill{
+    padding:15px 30px;
+    background:white;
+    color:black;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#35f4e7;
+    transform:translateY(-5px);
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.4);
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.text h1{
+    font-size:45px;
+}
+
+.image img{
+    width:250px;
+    height:250px;
+    margin-bottom:30px;
+}
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Arularasan</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#certificates">certificates</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="text">
+<h3>Hello, I'm</h3>
+<h1>Arularasan</h1>
+
+<p>
+A passionate Computer Science student interested in Web Development,
+Programming, UI Design, and creating modern websites.
+I love learning new technologies and building innovative projects.
+</p>
+
+<a href="resume.pdf" download class="btn">Download Resume</a>
+
+</div>
+
+<div class="image">
+<img src="C:\Users\durai\OneDrive\Pictures\IMG_20251209_182235_793.webp"></img>
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am Arularasan, a Computer Science student with a strong interest in
+HTML, CSS, JavaScript, PHP, C Programming, MySQL, and Responsive Web Design.
+I enjoy creating beautiful and user-friendly websites.
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">C Programming</div>
+<div class="skill">PHP</div>
+<div class="skill">MySQL</div>
+<div class="skill">Responsive Design</div>
+</div>
+
+</section>
+
+<section id="certificates">
+
+<h2>Certificates</h2>
+
+
+<div class="skill">
+<h3>Pumo technovotion</h3>
+<p>AI Made simple from curiosity and capability Certification.</p>
+<a href="C:\Users\durai\OneDrive\Pictures\13.png" download class="btn">View Certificate</a>
+</div>
+</section>
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<p>📧 arularasan@email.com</p>
+<p>📱 +91 9876543210</p>
+<p>📍 Tamil Nadu, India</p>
+
+</section>
+
+<footer>
+© 2026 Arularasan | All Rights Reserved
+</footer>
+
+</body>
+</html>
+
